@@ -6,7 +6,7 @@ export default class Library {
     this.author = author;
   }
 
-  addBook() {
+  addBook = () => {
     document.querySelector('.add-book').addEventListener('click', () => {
       const title = document.getElementById('title').value;
       const author = document.getElementById('author').value;
@@ -20,19 +20,19 @@ export default class Library {
         this.renderBooks();
       }
     });
-  }
+  };
 
-  renderBooks() {
+  renderBooks = () => {
     if (!bookList.length) {
       document.querySelector('.container').innerHTML = 'No books added';
     } else {
       let markup = '';
       bookList.forEach((elem, index) => {
         markup += `<div class="library-book" style="background-color: ${index % 2 && 'rgb(225, 223, 223)'}">
-                <p class="library-book__title">"${elem.title}"</p> <span> by </span>
-                <p class="library-book__author">${elem.author}</p>    
-                <button type="button" class="remove-btn" id=${index}>Remove</button>
-            </div>`;
+                  <p class="library-book__title">"${elem.title}"</p> <span> by </span>
+                  <p class="library-book__author">${elem.author}</p>    
+                  <button type="button" class="remove-btn" id=${index}>Remove</button>
+              </div>`;
       });
       document.querySelector('.container').innerHTML = markup;
     }
@@ -47,5 +47,5 @@ export default class Library {
       });
     };
     removeBook();
-  }
+  };
 }
