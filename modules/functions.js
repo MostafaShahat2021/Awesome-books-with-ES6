@@ -49,10 +49,3 @@ export default class Library {
     removeBook();
   }
 }
-
-// Date and Time
-// const showDate = document.querySelector('.our-date');
-// const date = new Date();
-// const currentDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
-// const currenttime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
-// showDate.innerHTML = `${currentDate.toString()} ${currenttime}`;
